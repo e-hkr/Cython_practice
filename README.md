@@ -11,20 +11,48 @@
 
 <br>
 
+## 実行環境
+01~04
+- OS : Windows10
+- Python : 3.10.7
+- Cython : 0.29.32
+- NumPy : 1.23.3
+
+05
+- OS : CentOS7
+- Python : 3.9.
+- Cython : 
+- NumPy : 
+
+<br>
+
 ## ディレクトリ構成
-### tutorial
-まずは`Hello World`をCythonで
+### 01_tutorial
+まずは`'Hello World'`をCythonで
 
-### fibonacci
-フィボナッチ数列の高速化
+### 02_fibonacci
+フィボナッチ数列の高速化  
+Pure Python : 0.49631 s  
+Cython : 0.17051 s
+→多少高速化できた
 
-### file_io
+### 03_file_io
 ファイルの読み込みを含む関数の高速化  
-→I/Oバウンドな処理なので高速化できず、むしろ遅い
+Pure Python :  s  
+Cython :  s  
+<!-- →I/Oバウンドな処理なので高速化できず、むしろ遅い -->
 
-### sample
+### 04_sample
 サンプルデータでのデモ  
+Pure Python :  s  
+Cython :  s  
+→
 
+## 05_real
+実データでの実験  
+Pure Python :  s  
+Cython :  s  
+→
 
 <br>
 
