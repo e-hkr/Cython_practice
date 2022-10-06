@@ -32,15 +32,21 @@
 
 ### 02_fibonacci
 フィボナッチ数列の高速化  
-Pure Python : 0.49631 s  
-Cython : 0.17051 s
-→多少高速化できた
+Pure Python : 3.45222 s  
+Cython : 1.04660 s  
+→約3.3倍の高速化に成功
+
+<!-- 
+n = 30, loop = 100
+PP:0.49631
+CY:0.17051
+ -->
 
 ### 03_file_io
 ファイルの読み込みを含む関数の高速化  
 Pure Python : 0.15331 s  
 Cython : 0.08741 s  
-→I/Oバウンドな処理にもかかわらず、`for`文の最適化で高速化に成功したと考えられる
+→I/Oバウンドな処理中心だが、`for`文の最適化で高速化に成功したと考えられる
 
 ### 04_sample
 サンプルデータでのデモ  
@@ -71,3 +77,32 @@ Cython :  s
   計算量が多く分割して処理しても問題ないときに有効。今回はI/Oバウンドと考えられるので、効果は薄そう。
 - 並行処理(マルチスレッド、ThreadPoolExecutor)  
   待ち時間が多いときに有効。
+
+<br>
+
+## 参考資料
+<details><summary></summary>
+
+Cythonの環境構築
+- 環境構築からコンパイルまで  
+  https://qiita.com/gwappa/items/db1f6f27218da0c5a932  
+  https://qiita.com/en3/items/1f1a609c4d7c8f3066a7
+- 
+
+実行時間計測
+- timeモジュール  
+  https://docs.python.org/ja/3/library/time.html
+- timeitモジュール  
+  https://docs.python.org/ja/3/library/timeit.html  
+  https://note.nkmk.me/python-timeit-measure/
+- cProfile  
+  https://docs.python.org/ja/3/library/profile.html  
+  https://qiita.com/meshidenn/items/4dbde22d1e7a13a255bb
+- pstatsモジュール  
+  https://docs.python.org/ja/3/library/profile.html#module-pstats
+- line_profiler  
+  https://qiita.com/aratana_tamutomo/items/aa3b723a3dd7a44e45d6
+- timeコマンド  
+  https://qiita.com/tossh/items/659e5934e52b38183200
+
+</details>
