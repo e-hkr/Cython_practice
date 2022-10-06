@@ -1,28 +1,21 @@
-import time
+import timeit
 from read_binary_cy import read_binary_cy
 from read_binary_py import read_binary_py
 
 
 def main():
-  # Cython
-  start_time = time.time()
-  for i in range(300):
-    data = read_binary_cy(i)
-  print(type(data))
-  print(data.max())
-  stop_time = time.time()
+  num_days = 300
+  loop = 10
 
-  print(f'Cython : {stop_time - start_time:.7f}s')
-
-  # Pure Python
-  start_time = time.time()
-  for i in range(300):
-    data = read_binary_py(i)
-  print(type(data))
-  print(data.max())
-  stop_time = time.time()
-
-  print(f'Pure Python : {stop_time - start_time:.7f}s')
+  t = timeit.timeit(f'read_binary_py({num_days})', 
+                    globals=globals(), 
+                    number=loop)
+  print(f'Pure Python : {t/loop:.5f} s')
+  
+  t = timeit.timeit(f'read_binary_cy({num_days})', 
+                    globals=globals(), 
+                    number=loop)
+  print(f'Cython : {t/loop:.5f} s')
 
 
 if __name__ == '__main__':
