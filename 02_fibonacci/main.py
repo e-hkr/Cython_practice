@@ -8,8 +8,8 @@ def fibo(n):
 
 
 def main():
-    n = 30
-    loop = 100
+    n = 35
+    loop = 10
 
     t = timeit.timeit(f'fibo_py({n})', globals=globals(), number=loop)
     print(f'Pure Python : {t/loop:.5f} s')

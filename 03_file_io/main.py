@@ -1,6 +1,6 @@
 import timeit
-from read_binary_cy import read_binary_cy
 from read_binary_py import read_binary_py
+from read_binary_cy import read_binary_cy
 
 
 def main():
