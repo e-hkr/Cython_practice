@@ -86,8 +86,8 @@ Cythonの環境構築
   https://qiita.com/gwappa/items/db1f6f27218da0c5a932  
   https://qiita.com/en3/items/1f1a609c4d7c8f3066a7
 
-NumPyをCython内で使用する方法
-- https://qiita.com/neruoneru/items/6c0fc0496620d2968b57
+- NumPyをCython内で使用する方法  
+  https://qiita.com/neruoneru/items/6c0fc0496620d2968b57
 
 実行時間計測
 - timeモジュール  
