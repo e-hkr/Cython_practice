@@ -95,14 +95,5 @@ NumPyをCython内で使用する方法
 - timeitモジュール  
   https://docs.python.org/ja/3/library/timeit.html  
   https://note.nkmk.me/python-timeit-measure/
-- cProfile  
-  https://docs.python.org/ja/3/library/profile.html  
-  https://qiita.com/meshidenn/items/4dbde22d1e7a13a255bb
-- pstatsモジュール  
-  https://docs.python.org/ja/3/library/profile.html#module-pstats
-- line_profiler  
-  https://qiita.com/aratana_tamutomo/items/aa3b723a3dd7a44e45d6
-- timeコマンド  
-  https://qiita.com/tossh/items/659e5934e52b38183200
 
 </details>
